@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferença entre Padding e Margin & Métodos GET vs POST com HTTPS</title>
+    <style>
+        body {
+            font-family: Segoe UI, sans-serif;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        .container-caixas {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start
+        }
+
+        .bloco {
+            border: 2px solid #16a34a;
+            background: #dcfce7;
+            color: #166534;
+            font-weight: bold;
+            font-size: 12px;
+            width: 220px
+        }
+
+        .com-padding {
+            padding: 20px;
+        }
+
+        .com-margin {
+            margin: 20px;
+        }
+
+        .form-card {
+            margin-top: 24px;
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 16px;
+            border-radius: 8px;
+            max-width: 500px
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #94a3b8;
+            border-radius: 4px;
+            margin-bottom: 8px
+        }
+
+        button {
+            background: #0284c7;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-caixas">
+        <div class="bloco com-padding">Padding: 20px (Espaço Interno que recebe a cor de fundo)</div>
+        <div class="bloco com-margin">Margin: 20px (Espaço Externo transparente que afasta vizinhos)</div>
+    </div>
+    <div class="form-card">
+        <h3>Método GET: parâmetros anexados na URL após o caractere ?</h3>
+        <form method="GET" action="#">
+            <input type="text" name="busca" placeholder="Digite uma busca...">
+            <button type="submit">Enviar por GET</button>
+        </form>
+    </div>
+</body>
+</html>

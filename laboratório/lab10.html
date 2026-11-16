@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid com Repeat/Gap e Flexbox com Quebra Automática (Flex-Wrap)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        .grade-repeat {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 16px;
+        }
+
+        .item {
+            background: #e0f2fe;
+            border: 2px solid #0284c7;
+            padding: 18px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .item.destaque {
+            background: #dcfce7;
+            border-color: #16a34a;
+            color: #166534;
+        }
+
+        .catalogo-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 18px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>CSS Grid: 1fr | 2fr (coluna central com o dobro) | 1fr com gap: 16px</h3>
+    <div class="grade-repeat">
+        <div class="item">Item 1 (1fr)</div>
+        <div class="item destaque">Item 2 (2fr - Dobro)</div>
+        <div class="item">Item 3 (1fr)</div>
+    </div>
+
+    <h3 style="margin-top:24px;">Catálogo Flexbox: flex-wrap: wrap e flex: 1 1 200px</h3>
+    <div class="catalogo-wrap">
+        <div class="card">Produto 1</div>
+        <div class="card">Produto 2</div>
+        <div class="card">Produto 3</div>
+        <div class="card">Produto 4</div>
+    </div>
+</body>
+
+</html>

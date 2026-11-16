@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Macro vs Flexbox Micro & Tabela com Cabeçalho Duplo</title>
+    <style>
+        body {
+            font-family: Segoe UI, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 10px;
+        }
+
+        .menu-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0f172a;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 6px;
+        }
+
+        .menu-flex a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin-left: 10px
+        }
+
+        .conteudo {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 6px
+        }
+
+        table {
+            width: 100%;
+            max-width: 400px;
+            border-collapse: collapse;
+            background: #fff
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e1;
+            padding: 8px
+        }
+
+        thead th {
+            background: #0284c7;
+            color: #fff
+        }
+
+        tbody th {
+            background: #e0f2fe;
+            color: #0369a1
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="layout-grid">
+        <header class="menu-flex">
+            <span>Logotipo</span>
+            <nav><a href="#">Início</a><a href="#">Sobre</a></nav>
+        </header>
+        <main class="conteudo">Conteúdo Principal posicionado via Grid</main>
+    </div>
+    <table style="margin-top:20px;">
+        <caption>Grade Horária de Disciplinas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Horário</th>
+                <th scope="col">Segunda-feira</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">08h - 10h</th>
+                <td>Programação Web</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

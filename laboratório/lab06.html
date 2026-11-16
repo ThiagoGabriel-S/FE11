@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid com a Unidade Proporcional fr & CSS Externo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        h2 {
+            color: #0284c7
+        }
+
+        .grid-fracoes {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .coluna {
+            background: #e0f2fe;
+            border: 2px solid #0284c7;
+            color: #0369a1;
+            padding: 24px 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 6px
+        }
+
+        .coluna.destaque {
+            background: #dbeafe;
+            border-color: #1e40af;
+            color: #1e3a8a
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Grade Proporcional: 1fr | 2fr | 1fr</h2>
+    <p>A coluna central (2fr) ocupa o dobro do espaço de cada coluna lateral (1fr).</p>
+
+    <div class="grid-fracoes">
+        <div class="coluna">1fr (25%)</div>
+        <div class="coluna destaque">2fr (50% do espaço)</div>
+        <div class="coluna">1fr (25%)</div>
+    </div>
+</body>
+</html>

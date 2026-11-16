@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas para Dados vs Layout & Media Queries (@media)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        table {
+            width: 100%;
+            max-width: 400px;
+            border-collapse: collapse;
+            background: #fff;
+            margin-bottom: 20px
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e1;
+            padding: 8px;
+            text-align: left
+        }
+
+        thead th {
+            background: #0284c7;
+            color: #fff
+        }
+
+        caption {
+            font-weight: bold;
+            text-align: left;
+            padding: 6px 0;
+            color: #0284c7
+        }
+        
+        .grade-responsiva {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .cartao {
+            background: #e0f2fe;
+            border: 2px solid #0284c7;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        @media (min-width: 600px) {
+            .grade-responsiva {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Relatório Comparativo de Preços</caption>
+        <thead>
+            <tr>
+                <th scope="col">Componente</th>
+                <th scope="col">Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Processador 8-Core</td>
+                <td>R$ 899,00</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Cartões Responsivos (1 coluna no celular, 2 no computador):</h3>
+    <div class="grade-responsiva">
+        <div class="cartao">Cartão A</div>
+        <div class="cartao">Cartão B</div>
+    </div>
+</body>
+</html>

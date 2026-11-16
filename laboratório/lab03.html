@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Name em Formulários & Cálculo Exato de Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        form {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 18px;
+            border-radius: 8px;
+            max-width: 460px;
+            margin-bottom: 20px
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: bold
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #94a3b8;
+            border-radius: 4px;
+            margin-top: 4px
+        }
+
+        button {
+            margin-top: 14px;
+            padding: 9px 16px;
+            background: #0284c7;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold
+        }
+
+        .caixa-104px {
+            box-sizing: content-box;
+            width: 80px;
+            height: 40px;
+            padding: 5px 10px;
+            border: 2px solid #000;
+            background: #fef3c7;
+            color: #78350f;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+    </style>
+</head>
+
+<body>
+    <form method="GET">
+        <h3>Teste de Transmissão de Campos:</h3>
+        <label for="campo-valido">Campo COM atributo name (é transmitido):</label>
+        <input type="text" id="campo-valido" name="usuario" value="Ana">
+
+        <label for="campo-invalido">Campo SEM atributo name (é descartado):</label>
+        <input type="text" id="campo-invalido" value="Dado Não Enviado">
+
+        <button type="submit">Enviar Formulário (GET)</button>
+    </form>
+
+    <h3>Caixa renderizada com 104px reais:</h3>
+    <div class="caixa-104px">
+        80×40 (mede 104px)
+    </div>
+</body>
+</html>

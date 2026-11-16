@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Dimensões com Border-Box & Flexbox com Space-Between</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Segoe UI, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        .barra-navegacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0f172a;
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 8px;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: #38bdf8
+        }
+
+        .links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 14px;
+            font-weight: bold
+        }
+
+        .links a:hover {
+            color: #fff
+        }
+
+        .caixa-borderbox {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #16a34a;
+            background: #dcfce7;
+            color: #166534;
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="barra-navegacao">
+        <div class="logo">🚀 MinhaMarca</div>
+        <nav class="links">
+            <a href="#">Início</a>
+            <a href="#">Projetos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <div class="caixa-borderbox">
+        width: 300px com padding 20px e border 2px (mede exatamente 300px)
+    </div>
+</body>
+
+</html>

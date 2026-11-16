@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia de Regras CSS e Mesclagem com Colspan</title>
+    <style>
+        h1 {
+            color: #2563eb;
+            font-family: Arial, sans-serif;
+            font-size: 1.3rem;
+        }
+
+        body {
+            font-family: Segoe UI, sans-serif;
+            padding: 20px;
+            background: #f8fafc
+        }
+
+        table {
+            width: 100%;
+            max-width: 540px;
+            border-collapse: collapse;
+            background: #fff;
+            margin-top: 16px
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            text-align: left
+        }
+
+        thead th {
+            background: #1e3a8a;
+            color: #fff
+        }
+
+        caption {
+            font-weight: bold;
+            color: #1e3a8a;
+            padding: 8px 0;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Título: Seletor (h1) + Propriedade (color) + Valor (#2563eb)</h1>
+    <table>
+        <caption>Grade Semanal de Estudos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Dia</th>
+                <th scope="col" colspan="2">Aulas do Período (2 Colunas Mescladas)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Segunda</td>
+                <td>HTML5 Semântico</td>
+                <td>CSS Box Model</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
